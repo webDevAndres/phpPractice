@@ -15,7 +15,7 @@ $discountPrice = $listPrice - $discountAmount;
 $listPriceFormatted = "$".number_format($listPrice, 2);
 $discountPercentFormatted = $discountPercent."%";
 $discountAmountFormatted = "$".number_format($discountAmount, 2);
-$discountPriceformatted = "$".number_format($discountAmount, 2);
+$discountPriceFormatted = "$".number_format($discountPrice, 2);
 
 ?>
 
@@ -30,22 +30,22 @@ $discountPriceformatted = "$".number_format($discountAmount, 2);
 </head>
 <body>
     <main>
-        <h1>This page is under construction</h1>
+        <h1>Product Discount Calculator</h1>
 
         <label>Product Description:</label>
         <span><?php echo htmlspecialchars($productDescription); ?></span><br>
 
         <label>List Price:</label>
-        <span><?php echo htmlspecialchars($listPrice); ?></span><br>
+        <span><?php echo htmlspecialchars($listPriceFormatted); ?></span><br>
 
         <label>Standard Discount:</label>
-        <span><?php echo htmlspecialchars($discountPercent); ?></span><br>
+        <span><?php echo htmlspecialchars($discountPercentFormatted); ?></span><br>
 
         <label>Discount Amount:</label>
-        <span><?php echo htmlspecialchars($discountAmount); ?></span><br>
+        <span><?php echo $discountAmountFormatted; ?></span><br>
 
         <label>Discount Price:</label>
-        <span><?php echo htmlspecialchars($discountPrice); ?></span><br>
+        <span><?php echo $discountPriceFormatted; ?></span><br>
     </main>
 </body>
 </html>
