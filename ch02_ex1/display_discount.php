@@ -1,5 +1,5 @@
 <?php
-//get the values from the POST array
+//get the data from the form post array
 $productDescription = filter_input(INPUT_POST, 'product_description');
 $listPrice = filter_input(INPUT_POST, 'list_price');
 $discountPercent = filter_input(INPUT_POST, 'discount_percent');
